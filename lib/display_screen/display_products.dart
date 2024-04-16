@@ -3,7 +3,7 @@ import 'package:ecommerce_application/homepage/util/colors.dart';
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'home/Components/containerDisplayProducts.dart';
+import 'home/Components/container_display_products.dart';
 
 class DisplayProductsLine extends StatefulWidget {
   const DisplayProductsLine({super.key});
@@ -68,6 +68,7 @@ class _ProductDisplayingDataState extends State<ProductDisplayingData> {
                   ),
                 ),
                 containerDisplayImageFull(),
+                containerDisplayTextFull(),
               ],
             ),
           ),

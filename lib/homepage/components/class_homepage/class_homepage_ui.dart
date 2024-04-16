@@ -103,8 +103,8 @@ class _HomePageState extends State<HomePage> {
                               GestureDetector(
                                 onTap: () {
                                   setState(() {
+                                    selectindex=index;
                                     pagesbool=false;
-                                    selectnumber=index;
                                     Navigator.of(context).pushNamed('/home');
                                   });
                                 },
