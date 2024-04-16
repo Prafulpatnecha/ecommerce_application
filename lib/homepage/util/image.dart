@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+
+AssetImage p1=const AssetImage('assets/images/p1.png');
+AssetImage p2=const AssetImage('assets/images/p2.png');
+AssetImage p3=const AssetImage('assets/images/p3.png');
+AssetImage p4=const AssetImage('assets/images/p4.png');
+AssetImage p5=const AssetImage('assets/images/p5.png');
+AssetImage p6=const AssetImage('assets/images/p6.png');
+AssetImage p7=const AssetImage('assets/images/p7.png');
+AssetImage p8=const AssetImage('assets/images/p8.png');
+AssetImage p9=const AssetImage('assets/images/p9.png');
+AssetImage p10=const AssetImage('assets/images/p10.png');
+AssetImage p11=const AssetImage('assets/images/p11.png');
+AssetImage p12=const AssetImage('assets/images/p12.png');
+AssetImage p13=const AssetImage('assets/images/p13.png');
+AssetImage p14=const AssetImage('assets/images/p14.png');
+AssetImage p15=const AssetImage('assets/images/p15.png');
+AssetImage p16=const AssetImage('assets/images/p16.png');
+AssetImage p17=const AssetImage('assets/images/p17.png');
+AssetImage p18=const AssetImage('assets/images/p18.png');
