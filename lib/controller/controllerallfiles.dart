@@ -10,11 +10,11 @@ class Ecommerce extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Akhilsir',
+      initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
-        '/home':(context) => const DisplayProductsLine(),
-        // '/':(context) => const DisplayProductsLine(),
-        // '/home': (context) =>
+        // '/':(context)=>
+        '/': (context) => HomePage(),
+        '/home':(context) => DisplayProductsLine(),
       },
     );
   }

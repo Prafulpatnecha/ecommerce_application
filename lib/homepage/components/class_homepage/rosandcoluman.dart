@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 // import '../listdatafind.dart';
 import 'containerdata.dart';
 
-Row rowBar({required Icon iconselect}) {
+Row rowBar({required GestureDetector iconselect,required bool firstbool}) {
   return Row(
     children: [
       Expanded(
@@ -20,25 +20,29 @@ Row rowBar({required Icon iconselect}) {
               const SizedBox(
                 width: 10,
               ),
-              containerIconPassing(
-                iconsfind: iconselect
-              ),
+              (firstbool==true)?containerIconPassing(
+                iconsfind: iconselect,
+              ):const Text(''),
               const Spacer(),
               containerIconPassing(
-                iconsfind: Icon(
-                  Icons.shopping_bag_outlined,
-                  size: 35,
-                  color: menuColor,
+                iconsfind: GestureDetector(
+                  child: Icon(
+                    Icons.shopping_bag_outlined,
+                    size: 35,
+                    color: menuColor,
+                  ),
                 ),
               ),
               const SizedBox(
                 width: 15,
               ),
               containerIconPassing(
-                iconsfind: Icon(
-                  Icons.notifications_none,
-                  size: 30,
-                  color: menuColor,
+                iconsfind: GestureDetector(
+                  child: Icon(
+                    Icons.notifications_none,
+                    size: 30,
+                    color: menuColor,
+                  ),
                 ),
               ),
               const SizedBox(

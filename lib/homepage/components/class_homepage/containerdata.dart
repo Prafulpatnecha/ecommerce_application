@@ -8,7 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../util/colors.dart';
 
-Container containerIconPassing({required Icon iconsfind}) {
+Container containerIconPassing({required GestureDetector iconsfind}) {
   return Container(
     height: 50,
     width: 50,
@@ -169,7 +169,8 @@ Widget containerScreenChangesText(
               style: const TextStyle(
                   color: Colors.white60,
                   fontWeight: FontWeight.bold,
-                  fontSize: 15),
+                  fontSize: 15,
+              ),
             ),
             const Spacer(),
             Container(

@@ -46,7 +46,7 @@ class _ProductDisplayingDataState extends State<ProductDisplayingData> {
             ],
             radius: 1,
             center: const Alignment(0.8, 0),
-          )),
+          ),),
           child: Container(
             height: height1,
             width: width1,
@@ -54,19 +54,19 @@ class _ProductDisplayingDataState extends State<ProductDisplayingData> {
             // color: Colors.orange,
             child: Column(
               children: [
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      Navigator.of(context).pop();
-                    });
-                  },
-                  child: rowBar(
-                    iconselect: Icon(
+                rowBar(
+                  firstbool: true,
+                    iconselect: GestureDetector(
+                      onTap: () {
+                         setState(() {
+                          Navigator.of(context).pop();
+                         });
+                      },
+                      child:Icon(
                       Icons.arrow_back_sharp,
                       color: menuColor,
                     ),
-                  ),
-                ),
+                  ),),
                 containerDisplayImageFull(),
                 containerDisplayTextFull(),
               ],
@@ -77,3 +77,10 @@ class _ProductDisplayingDataState extends State<ProductDisplayingData> {
     );
   }
 }
+// GestureDetector(
+// onTap: () {
+// setState(() {
+// Navigator.of(context).pop();
+// });
+// },
+// child:

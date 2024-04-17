@@ -44,11 +44,13 @@ class _HomePageState extends State<HomePage> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    rowBar(iconselect: Icon(
-                      Icons.sort,
-                      size: 40,
-                      color: menuColor,
-                    ),),
+                    rowBar(iconselect: GestureDetector(
+                      child: Icon(
+                        Icons.sort,
+                        size: 40,
+                        color: menuColor,
+                      ),
+                    ), firstbool: true,),
                     welcomeContainer(),
                     searchproducts(),
                     rowText(),
@@ -87,9 +89,9 @@ class _HomePageState extends State<HomePage> {
                                   setState(() {
                                     selectindex=index;
                                     pagesbool=true;
-                                    Navigator.of(context).pushNamed('/home');
                                     // print('object');
                                   });
+                                    Navigator.of(context).pushNamed('/home');
                                 },
                                 child: columnScreenChanges(
                                   textimage: productList[index]['textimage'],

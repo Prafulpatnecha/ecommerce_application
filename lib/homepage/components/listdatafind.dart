@@ -57,9 +57,9 @@ List productList = [
     'iconimage':const Icon(Icons.add),
     'colorback':Colors.yellow,
     'imageproduct': p6,
-    'textimage': 'Full Comfort\n  AutoMatic Chair',
-    'priceimage': 2999,
-    'rating': '⭐ 5.1 121 Rating',
+    'textimage': 'Full Comfort\n  AutoMatic💺',
+    'priceimage': 3999,
+    'rating': '⭐ 6.1 121 Rating',
     'description':
         'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
   },
