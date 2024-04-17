@@ -35,96 +35,94 @@ class _HomePageState extends State<HomePage> {
               center: const Alignment(0.8, 0),
             ),
           ),
-          child: Expanded(
-            child: Container(
-              height: double.infinity,
-              width: double.infinity,
-              // color: Colors.red,//todo <---------------------[color to check working area width and height margin to rape]----------------------
-              margin: const EdgeInsets.all(10),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    rowBar(iconselect: GestureDetector(
-                      child: Icon(
-                        Icons.sort,
-                        size: 40,
-                        color: menuColor,
+          child: Container(
+            height: double.infinity,
+            width: double.infinity,
+            // color: Colors.red,//todo <---------------------[color to check working area width and height margin to rape]----------------------
+            margin: const EdgeInsets.all(10),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  rowBar(iconselect: GestureDetector(
+                    child: Icon(
+                      Icons.sort,
+                      size: 40,
+                      color: menuColor,
+                    ),
+                  ), firstbool: true,),
+                  welcomeContainer(),
+                  searchproducts(),
+                  rowText(),
+                  // rowClicks(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      // const SizedBox(width: 20),
+                      ...List.generate(
+                        textListCategres.length,
+                        (index) => GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selectnumber = index;
+                            });
+                            // print(selectnumber);
+                          },
+                          child: containerCategories(
+                              ck: (index == selectnumber) ? true : false,
+                              textline: textListCategres[index]),
+                        ),
                       ),
-                    ), firstbool: true,),
-                    welcomeContainer(),
-                    searchproducts(),
-                    rowText(),
-                    // rowClicks(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        // const SizedBox(width: 20),
-                        ...List.generate(
-                          textListCategres.length,
-                          (index) => GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                selectnumber = index;
-                              });
-                              // print(selectnumber);
-                            },
-                            child: containerCategories(
-                                ck: (index == selectnumber) ? true : false,
-                                textline: textListCategres[index]),
-                          ),
+                    ],
+                  ),
+                  // SizedBox(height: 26,),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ...List.generate(
+                        productList.length,
+                        (index) => Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            (index!=productList.length)?GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  selectindex=index;
+                                  pagesbool=true;
+                                  // print('object');
+                                });
+                                  Navigator.of(context).pushNamed('/home');
+                              },
+                              child: columnScreenChanges(
+                                textimage: productList[index]['textimage'],
+                                priceimage: productList[index]['priceimage'],
+                                iconimage: productList[index]['iconimage'],
+                                imageproduct: productList[index]['imageproduct'],
+                                colorback: productList[index]['colorback'],
+                              ),
+                            ):const Text(''),
+                            (index!=productList.length)?
+                            GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  selectindex=index;
+                                  pagesbool=false;
+                                  Navigator.of(context).pushNamed('/home');
+                                });
+                              },
+                              child: columnScreenChanges(
+                                textimage: productList1[index]['textimage'],
+                                priceimage: productList1[index]['priceimage'],
+                                iconimage: productList1[index]['iconimage'],
+                                imageproduct: productList1[index]['imageproduct'],
+                                colorback: productList1[index]['colorback'],
+                              ),
+                            ):const Text(''),
+                          ],
                         ),
-                      ],
-                    ),
-                    // SizedBox(height: 26,),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ...List.generate(
-                          productList.length,
-                          (index) => Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              (index!=productList.length)?GestureDetector(
-                                onTap: () {
-                                  setState(() {
-                                    selectindex=index;
-                                    pagesbool=true;
-                                    // print('object');
-                                  });
-                                    Navigator.of(context).pushNamed('/home');
-                                },
-                                child: columnScreenChanges(
-                                  textimage: productList[index]['textimage'],
-                                  priceimage: productList[index]['priceimage'],
-                                  iconimage: productList[index]['iconimage'],
-                                  imageproduct: productList[index]['imageproduct'],
-                                  colorback: productList[index]['colorback'],
-                                ),
-                              ):const Text(''),
-                              (index!=productList.length)?
-                              GestureDetector(
-                                onTap: () {
-                                  setState(() {
-                                    selectindex=index;
-                                    pagesbool=false;
-                                    Navigator.of(context).pushNamed('/home');
-                                  });
-                                },
-                                child: columnScreenChanges(
-                                  textimage: productList1[index]['textimage'],
-                                  priceimage: productList1[index]['priceimage'],
-                                  iconimage: productList1[index]['iconimage'],
-                                  imageproduct: productList1[index]['imageproduct'],
-                                  colorback: productList1[index]['colorback'],
-                                ),
-                              ):const Text(''),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),

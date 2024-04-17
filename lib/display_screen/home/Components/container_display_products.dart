@@ -1,9 +1,11 @@
 import 'package:ecommerce_application/homepage/components/class_homepage/class_homepage_ui.dart';
 import 'package:ecommerce_application/homepage/components/listdatafind.dart';
 import 'package:ecommerce_application/homepage/util/colors.dart';
+import 'package:flutter/cupertino.dart';
 
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 // import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,37 +42,35 @@ Widget containerDisplayTextFull() {
       children: [
         Row(
           children: [
-            Stack(
-              children: [
-                Container(
-                  height: 100,
-                  width: 372,
-                  // color: Colors.blue,
-                  child: Text.rich(
-                    TextSpan(
-                      children: [
-                        (pagesbool == true)
-                            ? TextSpan(
-                                text:
-                                    '  ${productList[selectindex]['textimage']}',
-                                style: GoogleFonts.bungee(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white, fontSize: 35),
-                                ),
-                              )
-                            : TextSpan(
-                                text:
-                                    '  ${productList1[selectindex]['textimage']}',
-                                style: GoogleFonts.bungee(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white, fontSize: 35),
-                                ),
+            Expanded(
+              child: SizedBox(
+                height: 100,
+                width: 372,
+                // color: Colors.blue,
+                child: Text.rich(
+                  TextSpan(
+                    children: [
+                      (pagesbool == true)
+                          ? TextSpan(
+                              text:
+                                  '  ${productList[selectindex]['textimage']}',
+                              style: GoogleFonts.bungee(
+                                textStyle: const TextStyle(
+                                    color: Colors.white, fontSize: 35),
                               ),
-                      ],
-                    ),
+                            )
+                          : TextSpan(
+                              text:
+                                  '  ${productList1[selectindex]['textimage']}',
+                              style: GoogleFonts.bungee(
+                                textStyle: const TextStyle(
+                                    color: Colors.white, fontSize: 35),
+                              ),
+                            ),
+                    ],
                   ),
                 ),
-              ],
+              ),
             ),
           ],
         ),
@@ -79,25 +79,29 @@ Widget containerDisplayTextFull() {
         ),
         Row(
           children: [
-            Stack(
-              children: [
-                Container(
-                  height: 119,
-                  width: 372,
-                  // color: Colors.blue,
-                  child: ReadMoreText(
-                    (pagesbool==true)?productList[selectindex]['description']:productList1[selectindex]['description'],
-                    trimLines: 2,
-                    style: const TextStyle(color: Colors.white),
-                    trimMode: TrimMode.Line,
-                    colorClickableText: menuColor,
-                    trimExpandedText: 'Show less',
-                    trimCollapsedText: 'More Details',
-                    // delimiter: 'More Details',
-                    // delimiterStyle: TextStyle(decoration: TextDecoration.underline,decorationColor: menuColor),
+            Expanded(
+              child: SizedBox(
+                // height: 100,
+                // width: 372,
+                // color: Colors.blue,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      ReadMoreText(
+                        (pagesbool==true)?productList[selectindex]['description']:productList1[selectindex]['description'],
+                        trimLines: 2,
+                        style: const TextStyle(color: Colors.white),
+                        trimMode: TrimMode.Line,
+                        colorClickableText: menuColor,
+                        trimExpandedText: 'Show less',
+                        trimCollapsedText: 'More Details',
+                        // delimiter: 'More Details',
+                        // delimiterStyle: TextStyle(decoration: TextDecoration.underline,decorationColor: menuColor),
+                      ),
+                    ],
                   ),
                 ),
-              ],
+              ),
             ),
           ],
         ),

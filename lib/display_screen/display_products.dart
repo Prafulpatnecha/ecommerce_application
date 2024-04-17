@@ -52,24 +52,26 @@ class _ProductDisplayingDataState extends State<ProductDisplayingData> {
             width: width1,
             margin: const EdgeInsets.all(10),
             // color: Colors.orange,
-            child: Column(
-              children: [
-                rowBar(
-                  firstbool: true,
-                    iconselect: GestureDetector(
-                      onTap: () {
-                         setState(() {
-                          Navigator.of(context).pop();
-                         });
-                      },
-                      child:Icon(
-                      Icons.arrow_back_sharp,
-                      color: menuColor,
-                    ),
-                  ),),
-                containerDisplayImageFull(),
-                containerDisplayTextFull(),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  rowBar(
+                    firstbool: true,
+                      iconselect: GestureDetector(
+                        onTap: () {
+                           setState(() {
+                            Navigator.of(context).pop();
+                           });
+                        },
+                        child:Icon(
+                        Icons.arrow_back_sharp,
+                        color: menuColor,
+                      ),
+                    ),),
+                  containerDisplayImageFull(),
+                  containerDisplayTextFull(),
+                ],
+              ),
             ),
           ),
         ),

@@ -125,8 +125,13 @@ Widget containerScreenChanges({
     decoration: BoxDecoration(
       gradient: RadialGradient(colors: [
         colorback,
-        Colors.black12,
+        Colors.black54,
       ]),
+      border: Border(
+        top: BorderSide(
+          color: Colors.white38
+        )
+      ),
       color: Colors.black45,
       borderRadius: const BorderRadius.only(topLeft: Radius.circular(10)),
       image: DecorationImage(
