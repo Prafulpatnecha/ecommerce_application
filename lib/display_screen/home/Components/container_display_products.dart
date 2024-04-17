@@ -30,6 +30,6 @@ Widget containerDisplayImageFull()
 Widget containerDisplayTextFull()
 {
   return Container(
-
+    
   )
 }
