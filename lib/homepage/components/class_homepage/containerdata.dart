@@ -127,7 +127,7 @@ Widget containerScreenChanges({
         colorback,
         Colors.black54,
       ]),
-      border: Border(
+      border: const Border(
         top: BorderSide(
           color: Colors.white38
         )
