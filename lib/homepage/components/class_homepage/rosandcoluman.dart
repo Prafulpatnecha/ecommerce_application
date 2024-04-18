@@ -1,11 +1,14 @@
+// import 'dart:js';
+
 import 'package:ecommerce_application/homepage/util/colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // import '../listdatafind.dart';
 import 'containerdata.dart';
 
-Row rowBar({required GestureDetector iconselect,required bool firstbool}) {
+Row rowBar({required GestureDetector iconselect,required bool firstbool,required GestureDetector iconselect1}) {
   return Row(
     children: [
       Expanded(
@@ -25,13 +28,7 @@ Row rowBar({required GestureDetector iconselect,required bool firstbool}) {
               ):const Text(''),
               const Spacer(),
               containerIconPassing(
-                iconsfind: GestureDetector(
-                  child: Icon(
-                    Icons.shopping_bag_outlined,
-                    size: 35,
-                    color: menuColor,
-                  ),
-                ),
+                iconsfind: iconselect1,
               ),
               const SizedBox(
                 width: 15,

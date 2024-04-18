@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import '../listdatafind.dart';
 import 'containerdata.dart';
 
-
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -43,13 +41,26 @@ class _HomePageState extends State<HomePage> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  rowBar(iconselect: GestureDetector(
-                    child: Icon(
-                      Icons.sort,
-                      size: 40,
-                      color: menuColor,
+                  rowBar(
+                    iconselect: GestureDetector(
+                      child: Icon(
+                        Icons.sort,
+                        size: 40,
+                        color: menuColor,
+                      ),
                     ),
-                  ), firstbool: true,),
+                    firstbool: true,
+                    iconselect1: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/cartdetails');
+                      },
+                      child: Icon(
+                        Icons.shopping_bag_outlined,
+                        size: 35,
+                        color: menuColor,
+                      ),
+                    ),
+                  ),
                   welcomeContainer(),
                   searchproducts(),
                   rowText(),
@@ -83,40 +94,54 @@ class _HomePageState extends State<HomePage> {
                         (index) => Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            (index!=productList.length)?GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  selectindex=index;
-                                  pagesbool=true;
-                                  // print('object');
-                                });
-                                  Navigator.of(context).pushNamed('/home');
-                              },
-                              child: columnScreenChanges(
-                                textimage: productList[index]['textimage'],
-                                priceimage: productList[index]['priceimage'],
-                                iconimage: productList[index]['iconimage'],
-                                imageproduct: productList[index]['imageproduct'],
-                                colorback: productList[index]['colorback'],
-                              ),
-                            ):const Text(''),
-                            (index!=productList.length)?
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  selectindex=index;
-                                  pagesbool=false;
-                                  Navigator.of(context).pushNamed('/home');
-                                });
-                              },
-                              child: columnScreenChanges(
-                                textimage: productList1[index]['textimage'],
-                                priceimage: productList1[index]['priceimage'],
-                                iconimage: productList1[index]['iconimage'],
-                                imageproduct: productList1[index]['imageproduct'],
-                                colorback: productList1[index]['colorback'],
-                              ),
-                            ):const Text(''),
+                            (index != productList.length)
+                                ? GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        selectindex = index;
+                                        pagesbool = true;
+                                        // print('object');
+                                      });
+                                      Navigator.of(context).pushNamed('/home');
+                                    },
+                                    child: columnScreenChanges(
+                                      textimage: productList[index]
+                                          ['textimage'],
+                                      priceimage: productList[index]
+                                          ['priceimage'],
+                                      iconimage: productList[index]
+                                          ['iconimage'],
+                                      imageproduct: productList[index]
+                                          ['imageproduct'],
+                                      colorback: productList[index]
+                                          ['colorback'],
+                                    ),
+                                  )
+                                : const Text(''),
+                            (index != productList.length)
+                                ? GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        selectindex = index;
+                                        pagesbool = false;
+                                        Navigator.of(context)
+                                            .pushNamed('/home');
+                                      });
+                                    },
+                                    child: columnScreenChanges(
+                                      textimage: productList1[index]
+                                          ['textimage'],
+                                      priceimage: productList1[index]
+                                          ['priceimage'],
+                                      iconimage: productList1[index]
+                                          ['iconimage'],
+                                      imageproduct: productList1[index]
+                                          ['imageproduct'],
+                                      colorback: productList1[index]
+                                          ['colorback'],
+                                    ),
+                                  )
+                                : const Text(''),
                           ],
                         ),
                       ),
@@ -131,4 +156,5 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-bool pagesbool=true;
+
+bool pagesbool = true;
