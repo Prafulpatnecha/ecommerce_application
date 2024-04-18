@@ -2,7 +2,6 @@ import 'package:ecommerce_application/homepage/components/class_homepage/class_h
 import 'package:ecommerce_application/homepage/components/class_homepage/rosandcoluman.dart';
 import 'package:ecommerce_application/homepage/components/listdatafind.dart';
 import 'package:ecommerce_application/homepage/util/colors.dart';
-import 'package:flutter/cupertino.dart';
 
 // import 'package:flutter/cupertino.dart';
 // import 'package:flutter/cupertino.dart';
@@ -32,29 +31,33 @@ class _DisplayProductsLineState extends State<DisplayProductsLine> {
               // (pagesbool==true)?productList[selectindex]['cartbool']==true:productList1[selectindex]['cartbool']==true
               if (pagesbool == true) {
                 if (productList[selectindex]['cartbool'] == false) {
+                  productList[selectindex]['price'] = productList[selectindex]['priceimage'];
+                  totalbill = productList[selectindex]['priceimage']+totalbill;
                   cart.add(productList[selectindex]);
                   productList[selectindex]['cartbool'] = true;
                 }
               } else {
                 if (productList1[selectindex]['cartbool'] == false) {
+                  productList1[selectindex]['price'] = productList1[selectindex]['priceimage'];
+                  totalbill = productList1[selectindex]['priceimage']+totalbill;
                   cart.add(productList1[selectindex]);
                   productList1[selectindex]['cartbool'] = true;
                 }
               }
             });
-            if (pagesbool == true) {
-              if (productList[selectindex]['cartbool'] == false) {
-                cart.add(productList[selectindex]);
-                productList[selectindex]['cartbool'] = true;
-                print('Yes Done');
-              }
-            } else {
-              if (productList1[selectindex]['cartbool'] == false) {
-                cart.add(productList1[selectindex]);
-                productList1[selectindex]['cartbool'] = true;
-                print('Yes Done');
-              }
-            }
+            // if (pagesbool == true) {
+            //   if (productList[selectindex]['cartbool'] == false) {
+            //     cart.add(productList[selectindex]);
+            //     productList[selectindex]['cartbool'] = true;
+            //     print('Yes Done');
+            //   }
+            // } else {
+            //   if (productList1[selectindex]['cartbool'] == false) {
+            //     cart.add(productList1[selectindex]);
+            //     productList1[selectindex]['cartbool'] = true;
+            //     print('Yes Done');
+            //   }
+            // }
           },
           child: BottomAppBar(
             //todo<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[Navigationbar]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

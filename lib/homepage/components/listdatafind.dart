@@ -1,9 +1,14 @@
 import 'package:ecommerce_application/homepage/util/image.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/material.dart';
+// int inc_dec=1;
+int totalbill=0;
 
+List cart=[];
 List productList = [
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
     'iconimage':const Icon(Icons.add),
     'colorback':Colors.blue,
@@ -15,6 +20,8 @@ List productList = [
         'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
   },
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
     'iconimage':const Icon(Icons.add),
     'colorback':Colors.cyanAccent,
@@ -26,6 +33,8 @@ List productList = [
         'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
   },
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
     'iconimage':const Icon(Icons.add),
     'colorback':Colors.white,
@@ -37,6 +46,8 @@ List productList = [
         'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
   },
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
     'iconimage':const Icon(Icons.add),
     'colorback':Colors.white70,
@@ -48,6 +59,8 @@ List productList = [
         'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
   },
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
     'iconimage':const Icon(Icons.add),
     'colorback':Colors.lightBlue,
@@ -59,6 +72,8 @@ List productList = [
         'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
   },
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
     'iconimage':const Icon(Icons.add),
     'colorback':Colors.yellow,
@@ -70,6 +85,8 @@ List productList = [
         'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
   },
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
     'iconimage':const Icon(Icons.add),
     'colorback':Colors.yellow,
@@ -81,6 +98,8 @@ List productList = [
         'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
   },
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
     'iconimage':const Icon(Icons.add),
     'colorback':Colors.orangeAccent,
@@ -92,6 +111,8 @@ List productList = [
         'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
   },
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
   'iconimage':const Icon(Icons.add),
   'colorback':Colors.cyan,
@@ -105,6 +126,8 @@ List productList = [
 ];
 List productList1=[
 {
+  'inc_dec':1,
+  'price':0,
   'cartbool':false,
 'iconimage':const Icon(Icons.add),
 'colorback':Colors.orangeAccent,
@@ -116,6 +139,8 @@ List productList1=[
 'You definitely want a chair with a sturdy frame and quality material that will last, as well as a chair that adjusts to your needs.They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
 },
 {
+  'inc_dec':1,
+  'price':0,
   'cartbool':false,
 'iconimage':const Icon(Icons.add),
 'colorback':Colors.white,
@@ -127,6 +152,8 @@ List productList1=[
 'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
 },
 {
+  'inc_dec':1,
+  'price':0,
   'cartbool':false,
 'iconimage':const Icon(Icons.add),
 'colorback':Colors.orangeAccent,
@@ -138,6 +165,8 @@ List productList1=[
 'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
 },
 {
+  'inc_dec':1,
+  'price':0,
   'cartbool':false,
 'iconimage':const Icon(Icons.add),
 'colorback':Colors.black,
@@ -149,6 +178,8 @@ List productList1=[
 'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
 },
   {
+    'inc_dec':1,
+    'price':0,
     'cartbool':false,
 'iconimage':const Icon(Icons.add),
 'colorback':Colors.cyanAccent,
@@ -160,6 +191,8 @@ List productList1=[
 'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
 },
 {
+  'inc_dec':1,
+  'price':0,
   'cartbool':false,
 'iconimage':const Icon(Icons.add),
 'colorback':Colors.purple,
@@ -171,6 +204,8 @@ List productList1=[
 'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
 },
 {
+  'inc_dec':1,
+  'price':0,
   'cartbool':false,
 'iconimage':const Icon(Icons.add),
 'colorback':Colors.orange,
@@ -182,6 +217,8 @@ List productList1=[
 'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
 },
 {
+  'inc_dec':1,
+  'price':0,
   'cartbool':false,
 'iconimage':const Icon(Icons.add),
 'colorback':Colors.brown,
@@ -193,6 +230,8 @@ List productList1=[
 'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
 },
 {
+  'inc_dec':1,
+  'price':0,
   'cartbool':false,
 'iconimage':const Icon(Icons.add),
 'colorback':Colors.white10,
@@ -211,4 +250,3 @@ List textListCategres = [
   'Study Room',
 ];
 int selectindex=0;
-List cart=[];
