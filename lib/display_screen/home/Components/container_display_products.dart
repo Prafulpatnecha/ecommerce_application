@@ -110,8 +110,8 @@ Widget containerDisplayTextFull() {
               Stack(
                 children: [
                   SizedBox(
-                    height: 35,
-                    width: 130,
+                    height: 40,
+                    width: 140,
                     // color: Colors.blue,
                     child: Text(
                       ' \$ ${(pagesbool==true)?productList[selectindex]['priceimage']:productList1[selectindex]['priceimage']}',

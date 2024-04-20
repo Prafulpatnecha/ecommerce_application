@@ -1,6 +1,7 @@
 // import 'dart:js';
 
 import 'package:ecommerce_application/homepage/util/colors.dart';
+import 'package:flutter/cupertino.dart';
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -74,12 +75,12 @@ Widget rowText() {
 
 Widget columnScreenChanges({required Color colorback,
   required AssetImage imageproduct,
-  required String textimage,required var priceimage,required Icon iconimage})
+  required String textimage,required var priceimage,required GestureDetector iconimagegast})
 {
   return Column(
     children: [
       containerScreenChanges(colorback: colorback,imageproduct: imageproduct,),
-      containerScreenChangesText(iconimage: iconimage,priceimage: priceimage,textimage: textimage),
+      containerScreenChangesText(iconimagegast: iconimagegast,priceimage: priceimage,textimage: textimage),
     ],
   );
 }

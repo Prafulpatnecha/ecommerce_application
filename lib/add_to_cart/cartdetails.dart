@@ -74,12 +74,13 @@ class _CartPageState extends State<CartPage> {
                                 cart[index]['inc_dec']++;
                               });
                             },
-                            child: containerAddAndDec(iconadd: Icon(Icons.exposure_plus_1,color: menuColor,)),
+                            child: containerAddAndDec(iconadd: Icon(Icons.exposure_plus_1,color: menuColor,),),
                           ),geste: GestureDetector(
                             onTap: () {
                               setState(() {
                                 for(int i=0;i<cart[index]['inc_dec'];i++){
                                 totalbill=(totalbill-cart[index]['priceimage']).toInt();}
+                                // cartlent--;
                                 cart[index]['inc_dec']=1;
                                 cart[index]['cartbool']=false;
                                 cart[index]['price']=0;

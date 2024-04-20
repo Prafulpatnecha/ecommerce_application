@@ -144,7 +144,7 @@ Widget containerScreenChanges({
 Widget containerScreenChangesText(
     {required var textimage,
     required var priceimage,
-    required Icon iconimage}) {
+    required GestureDetector iconimagegast}) {
   return Container(
     width: 150,
     height: 75,
@@ -178,13 +178,7 @@ Widget containerScreenChangesText(
               ),
             ),
             const Spacer(),
-            Container(
-              // alignment: Alignment.center,
-              height: 30, width: 30,
-              decoration: BoxDecoration(
-                  color: menuColor, borderRadius: BorderRadius.circular(2)),
-              child: iconimage,
-            ),
+            iconimagegast,
             const SizedBox(
               width: 5,
             )
@@ -196,4 +190,14 @@ Widget containerScreenChangesText(
       ],
     ),
   );
+}
+
+Container containerAddIcon({required Icon iconimage}) {
+  return Container(
+            // alignment: Alignment.center,
+            height: 30, width: 30,
+            decoration: BoxDecoration(
+                color: menuColor, borderRadius: BorderRadius.circular(2)),
+            child: iconimage,
+          );
 }

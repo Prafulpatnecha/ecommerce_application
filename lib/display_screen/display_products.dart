@@ -62,7 +62,7 @@ class _DisplayProductsLineState extends State<DisplayProductsLine> {
           child: BottomAppBar(
             //todo<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[Navigationbar]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
             color: menuColor,
-            height: 50,
+            height: 60,
             child: bottomNavigationcart(),
           ),
         ),

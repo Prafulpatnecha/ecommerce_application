@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 // import 'package:flutter/material.dart';
 // int inc_dec=1;
 int totalbill=0;
-
+int i=1;
+int cartlent=cart.length;
 List cart=[];
 List productList = [
   {

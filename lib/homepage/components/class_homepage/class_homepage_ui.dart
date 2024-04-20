@@ -1,7 +1,9 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:ecommerce_application/homepage/components/class_homepage/rosandcoluman.dart';
 import 'package:ecommerce_application/homepage/util/colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import '../listdatafind.dart';
 import 'containerdata.dart';
@@ -54,10 +56,17 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).pushNamed('/cartdetails');
                       },
-                      child: Icon(
-                        Icons.shopping_bag_outlined,
-                        size: 35,
-                        color: menuColor,
+                      child: Stack(
+                        children: [
+                          Align(
+                            child: Icon(
+                              Icons.shopping_bag_outlined,
+                              size: 35,
+                              color: menuColor,
+                            ),
+                          ),
+                          // todo<---===================================[cart Counter Not Use But Work Line 170]======================================
+                        ],
                       ),
                     ),
                   ),
@@ -109,8 +118,17 @@ class _HomePageState extends State<HomePage> {
                                           ['textimage'],
                                       priceimage: productList[index]
                                           ['priceimage'],
-                                      iconimage: productList[index]
-                                          ['iconimage'],
+                                      iconimagegast: GestureDetector(
+                                        onTap: () {
+                                          if (productList[index]['cartbool'] == false) {
+                                            productList[index]['price'] = productList[index]['priceimage'];
+                                            totalbill = productList[index]['priceimage']+totalbill;
+                                            cart.add(productList[index]);
+                                            productList[index]['cartbool'] = true;
+                                          }
+                                        },
+                                        child: containerAddIcon(iconimage: productList1[index]['iconimage'],),
+                                      ),
                                       imageproduct: productList[index]
                                           ['imageproduct'],
                                       colorback: productList[index]
@@ -133,8 +151,17 @@ class _HomePageState extends State<HomePage> {
                                           ['textimage'],
                                       priceimage: productList1[index]
                                           ['priceimage'],
-                                      iconimage: productList1[index]
-                                          ['iconimage'],
+                                      iconimagegast: GestureDetector(
+                                        onTap: () {
+                                          if (productList1[index]['cartbool'] == false) {
+                                            productList1[index]['price'] = productList1[index]['priceimage'];
+                                            totalbill = productList1[index]['priceimage']+totalbill;
+                                            cart.add(productList1[index]);
+                                            productList1[index]['cartbool'] = true;
+                                          }
+                                        },
+                                        child: containerAddIcon(iconimage: productList1[index]['iconimage'],),
+                                      ),
                                       imageproduct: productList1[index]
                                           ['imageproduct'],
                                       colorback: productList1[index]
@@ -158,3 +185,34 @@ class _HomePageState extends State<HomePage> {
 }
 
 bool pagesbool = true;
+                          // Align(
+                          //   alignment: Alignment(0, 0.2),
+                          //   child: Container(
+                          //     height: 18,
+                          //     width: 17,
+                          //     decoration: BoxDecoration(
+                          //       color: Colors.red,
+                          //       // shape: BoxShape.circle
+                          //     ),
+                          //     child: Container(
+                          //       // color: Colors.greenAccent,
+                          //       child: Column(
+                          //           mainAxisAlignment: MainAxisAlignment.center,
+                          //           children: [
+                          //             Row(
+                          //                 children: List.generate(
+                          //               cart.length,
+                          //               (index) {
+                          //
+                          //                 return Container();
+                          //               },
+                          //             )),
+                          //             Text(
+                          //               cart.length.toString(),
+                          //               style: TextStyle(
+                          //                   color: Colors.white, fontSize: 10),
+                          //             ),
+                          //           ]),
+                          //     ),
+                          //   ),
+                          // )

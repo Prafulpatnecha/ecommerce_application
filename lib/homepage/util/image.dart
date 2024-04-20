@@ -18,3 +18,4 @@ AssetImage p15=const AssetImage('assets/images/p15.png');
 AssetImage p16=const AssetImage('assets/images/p16.png');
 AssetImage p17=const AssetImage('assets/images/p17.png');
 AssetImage p18=const AssetImage('assets/images/p18.png');
+AssetImage b1=const AssetImage('assets/b1.png');
