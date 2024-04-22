@@ -108,6 +108,7 @@ class _CartPageState extends State<CartPage> {
                                             ['priceimage'] +
                                         cart[index]['price'];
                                     cart[index]['inc_dec']++;
+                                    billperfact=true;
                                   });
                                 },
                                 child: containerAddAndDec(
