@@ -20,8 +20,8 @@ samples, guidance on mobile development, and a full API reference.
 <p>
 <a href ="">
   <img src="https://github.com/Prafulpatnecha/ecommerce_application/assets/144161200/22a69b1b-5edf-4f6b-9679-1c40076aed22" width="22%" Height="35%">
-  <img src="https://github.com/Prafulpatnecha/ecommerce_application/assets/144161200/f5d90e89-7568-4db3-b431-1338375ef5be" width="22%" Height="35%">
 <img src="https://github.com/Prafulpatnecha/ecommerce_application/assets/144161200/a35ec40a-c682-4467-b9d1-3114b896c0a5" width="22%" Height="35%">
+  <img src="https://github.com/Prafulpatnecha/ecommerce_application/assets/144161200/f5d90e89-7568-4db3-b431-1338375ef5be" width="22%" Height="35%">
   <img src="https://github.com/Prafulpatnecha/ecommerce_application/assets/144161200/f3597709-2ad0-4079-8ad3-3290bc3071d1" width="22%" Height="35%">
   <img src="https://github.com/Prafulpatnecha/ecommerce_application/assets/144161200/baa78fc9-d2cf-43e5-9d26-40ceccbe2ef1" width="22%" Height="35%">
   <img src="https://github.com/Prafulpatnecha/ecommerce_application/assets/144161200/d6cf20c5-ad99-4047-951e-1dc30457b19e" width="22%" Height="35%">
