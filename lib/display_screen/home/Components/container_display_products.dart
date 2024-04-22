@@ -51,21 +51,21 @@ Widget containerDisplayTextFull() {
                       children: [
                         (pagesbool == true)
                             ? TextSpan(
-                                text:
-                                    '  ${productList[selectindex]['textimage']}',
-                                style: GoogleFonts.bungee(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white, fontSize: 35),
-                                ),
-                              )
+                          text:
+                          '  ${productList[selectindex]['textimage']}',
+                          style: GoogleFonts.bungee(
+                            textStyle: const TextStyle(
+                                color: Colors.white, fontSize: 35),
+                          ),
+                        )
                             : TextSpan(
-                                text:
-                                    '  ${productList1[selectindex]['textimage']}',
-                                style: GoogleFonts.bungee(
-                                  textStyle: const TextStyle(
-                                      color: Colors.white, fontSize: 35),
-                                ),
-                              ),
+                          text:
+                          '  ${productList1[selectindex]['textimage']}',
+                          style: GoogleFonts.bungee(
+                            textStyle: const TextStyle(
+                                color: Colors.white, fontSize: 35),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -87,7 +87,9 @@ Widget containerDisplayTextFull() {
                     child: Column(
                       children: [
                         ReadMoreText(
-                          (pagesbool==true)?productList[selectindex]['description']:productList1[selectindex]['description'],
+                          (pagesbool == true)
+                              ? productList[selectindex]['description']
+                              : productList1[selectindex]['description'],
                           trimLines: 2,
                           style: const TextStyle(color: Colors.white),
                           trimMode: TrimMode.Line,
@@ -114,8 +116,11 @@ Widget containerDisplayTextFull() {
                     width: 140,
                     // color: Colors.blue,
                     child: Text(
-                      ' \$ ${(pagesbool==true)?productList[selectindex]['priceimage']:productList1[selectindex]['priceimage']}',
-                      style: GoogleFonts.bungee(color: Colors.white,fontSize: 30),
+                      ' \$ ${(pagesbool == true)
+                          ? productList[selectindex]['priceimage']
+                          : productList1[selectindex]['priceimage']}',
+                      style: GoogleFonts.bungee(
+                          color: Colors.white, fontSize: 30),
                     ),
                   ),
                 ],
@@ -128,7 +133,9 @@ Widget containerDisplayTextFull() {
                     width: 130,
                     // color: Colors.blue,
                     child: Text(
-                      '   ${(pagesbool==true)?productList[selectindex]['rating']:productList1[selectindex]['rating']}',
+                      '   ${(pagesbool == true)
+                          ? productList[selectindex]['rating']
+                          : productList1[selectindex]['rating']}',
                       style: const TextStyle(color: Colors.white,),
                     ),
                   ),
@@ -141,3 +148,4 @@ Widget containerDisplayTextFull() {
     ),
   );
 }
+// List count=[];

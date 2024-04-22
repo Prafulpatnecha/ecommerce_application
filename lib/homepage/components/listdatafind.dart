@@ -2,6 +2,7 @@ import 'package:ecommerce_application/homepage/util/image.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/material.dart';
 // int inc_dec=1;
+bool billperfact=true;
 int totalbill=0;
 int i=1;
 int cartlent=cart.length;
@@ -244,6 +245,7 @@ List productList1=[
 'They resemble office chairs, but include a headrest, lumbar support (usually in the form of a cushion), as well as adjustable armrests. Platform gaming. Platform gaming chairs are popular among console gamers. This is because they are meant to rest on the floor and are efficient for television gaming.'
 },
 ];
+// List count=[true];
 List textListCategres = [
   'All',
   'Bedroom',

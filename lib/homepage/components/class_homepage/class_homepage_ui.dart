@@ -1,9 +1,9 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:ecommerce_application/homepage/components/class_homepage/rosandcoluman.dart';
 import 'package:ecommerce_application/homepage/util/colors.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+// import 'package:flutter/widgets.dart';
 
 import '../listdatafind.dart';
 import 'containerdata.dart';
@@ -45,10 +45,14 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   rowBar(
                     iconselect: GestureDetector(
-                      child: Icon(
-                        Icons.sort,
-                        size: 40,
-                        color: menuColor,
+                      child: Container
+                        (
+                        color: showColor,
+                        child: Icon(
+                          Icons.sort,
+                          size: 40,
+                          color: menuColor,
+                        ),
                       ),
                     ),
                     firstbool: true,
@@ -59,10 +63,13 @@ class _HomePageState extends State<HomePage> {
                       child: Stack(
                         children: [
                           Align(
-                            child: Icon(
-                              Icons.shopping_bag_outlined,
-                              size: 35,
-                              color: menuColor,
+                            child: Container(
+                              color: showColor,
+                              child: Icon(
+                                Icons.shopping_bag_outlined,
+                                size: 35,
+                                color: menuColor,
+                              ),
                             ),
                           ),
                           // todo<---===================================[cart Counter Not Use But Work Line 170]======================================

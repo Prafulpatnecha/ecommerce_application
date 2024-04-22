@@ -25,8 +25,8 @@ class _DisplayProductsLineState extends State<DisplayProductsLine> {
     double width1 = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: GestureDetector(
-          onTap: () {
+        bottomNavigationBar: TextButton(
+          onPressed: () {
             setState(() {
               // (pagesbool==true)?productList[selectindex]['cartbool']==true:productList1[selectindex]['cartbool']==true
               if (pagesbool == true) {
@@ -35,6 +35,7 @@ class _DisplayProductsLineState extends State<DisplayProductsLine> {
                   totalbill = productList[selectindex]['priceimage']+totalbill;
                   cart.add(productList[selectindex]);
                   productList[selectindex]['cartbool'] = true;
+                  billperfact=true;
                 }
               } else {
                 if (productList1[selectindex]['cartbool'] == false) {
@@ -42,8 +43,10 @@ class _DisplayProductsLineState extends State<DisplayProductsLine> {
                   totalbill = productList1[selectindex]['priceimage']+totalbill;
                   cart.add(productList1[selectindex]);
                   productList1[selectindex]['cartbool'] = true;
+                  billperfact=true;
                 }
               }
+              Navigator.of(context).pushNamed('/cartdetails');
             });
             // if (pagesbool == true) {
             //   if (productList[selectindex]['cartbool'] == false) {
@@ -59,14 +62,14 @@ class _DisplayProductsLineState extends State<DisplayProductsLine> {
             //   }
             // }
           },
-          child: BottomAppBar(
+          child: SizedBox(
             //todo<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[Navigationbar]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-            color: menuColor,
+            // color: menuColor,
             height: 60,
             child: bottomNavigationcart(),
           ),
         ),
-        backgroundColor: backColor,
+        backgroundColor: menuColor,
         body: Container(
           // height: height,
           // width: width,
@@ -104,11 +107,14 @@ class _DisplayProductsLineState extends State<DisplayProductsLine> {
                     onTap: () {
                         Navigator.of(context).pop();
                     },
-                    child: Icon(
-                      Icons.arrow_back_sharp,
-                      color: menuColor,
+                      child: Container(
+                        color: showColor,
+                        child: Icon(
+                          Icons.arrow_back_sharp,
+                          color: menuColor,
+                        ),
+                      ),
                     ),
-                  ),
                   iconselect1: GestureDetector(
                     onTap: () {
                       // setState(() {
@@ -116,10 +122,13 @@ class _DisplayProductsLineState extends State<DisplayProductsLine> {
                       Navigator.of(context).pushNamed('/cartdetails');
                       // });
                     },
-                    child: Icon(
-                      Icons.shopping_bag_outlined,
-                      size: 35,
-                      color: menuColor,
+                    child: Container(
+                      color: showColor,
+                      child: Icon(
+                        Icons.shopping_bag_outlined,
+                        size: 35,
+                        color: menuColor,
+                      ),
                     ),
                   ),
                 ),
